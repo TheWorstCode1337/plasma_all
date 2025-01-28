@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu {
+	z-index: 0;
+    padding-top: 1.35%;
+	padding-left: 30.89px;
+	position: relative;
+	height: fit-content;
+	list-style-type: none;
+	font-size: 18px;
+    
+    .childli{
+		.li2{
+			background: linear-gradient(45deg, #8b00ff 40%, #0000ff 60%);
+			font-size: 20;
+			-webkit-background-clip: text;
+			background-clip: none;
+			-webkit-text-fill-color: transparent;
+			color: #0B2349;
+			display: table;
+			background-size: 150% 150%;
+			animation: gradient-text 10s ease-in-out infinite;
+			transform: translate3d(0,0,0);
+		}
+        visibility: hidden;
+		color: #000;
+		width: fit-content;
+		height: fit-content;
+	}
+
+	img{
+		width: 20px;
+		height: 20px;
+	}
+
+	ul {
+		background: #ddd;
+		height: fit-content;
+		left: 25.75px;
+		opacity: 0;
+		position: absolute;
+		transition: all .5s ease-in-out;
+		top: 100%;
+		border-radius: 10px;
+		width: auto;
+	}
+
+	li:hover ul {
+		width: auto;
+		height: fit-content;
+		opacity: 1;
+        visibility: visible;
+	}
+
+	ul a {
+		text-decoration: none;
+		color: #000;
+		display: block;
+		padding: 5px 20px;
+	}
+}
+
+@keyframes gradient-text {
+	0%{
+		background-position: 0% 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0% 50%;
+	}
+}
+
+
+.bg1{
+    width: 100%;
+    height: 100vh;
+	background:url('/image/plasma.jpg') no-repeat center /cover, #555555;
+	background-size:100% 100%;
+	background-blend-mode: multiply;
+	background-attachment: fixed;
+	-webkit-text-fill-color: white;
+	position: relative;
+    animation: fadeIn 0.67s ease-in-out forwards;
+}
+
+body{
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
