@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
@@ -6,7 +7,7 @@
 }
 
 .menu {
-  z-index: 0;
+  z-index: 100;
   padding-top: 1.35%;
   padding-left: 30.89px;
   position: relative;
@@ -23,9 +24,8 @@
   height: -moz-fit-content;
   height: fit-content;
 }
-.menu .childli .li2 {
-  background: linear-gradient(45deg, #8b00ff 40%, #0000ff 60%);
-  font-size: 20;
+.menu .childli li:hover {
+  background: linear-gradient(45deg, #000 40%, #f39f18 60%);
   -webkit-background-clip: text;
   background-clip: none;
   -webkit-text-fill-color: transparent;
@@ -90,6 +90,8 @@
 
 body {
   font-family: "Montserrat", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
 }
 
 @keyframes fadeIn {
@@ -99,4 +101,66 @@ body {
   100% {
     opacity: 1;
   }
+}
+.vopr .vopros {
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  font-size: 55px;
+  animation: fadeInRight 1.5s ease-out, fadeIn 2s ease-in-out;
+  animation-delay: 0.3s;
+  margin-top: -2.75%;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.vopr .otvet {
+  text-align: center;
+  animation: fadeInRight 1.5s ease-out, fadeIn 2s ease-in-out;
+  animation-delay: 1.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  padding-top: 12%;
+  font-size: 73.87px;
+}
+.vopr .poyas {
+  padding-top: 10%;
+  animation: fadeInRight 1.5s ease-out, fadeIn 2s ease-in-out;
+  animation-delay: 1.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  font-size: 50px;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); /* Начинаем за пределами экрана справа */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Заканчиваем в исходном положении */
+  }
+}
+.scroll-block {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.scroll-block p {
+  font-size: 2rem;
+  color: #333;
+  opacity: 0;
+  /*transform: translateX(100px); 
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;*/
+}
+
+.scroll-block.visible p {
+  /*opacity: 1;
+  transform: translateX(0);*/
+  animation: fadeIn 0.3s ease-in-out 0.5s forwards;
 }/*# sourceMappingURL=style.css.map */
