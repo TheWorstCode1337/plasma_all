@@ -5,25 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Плазма как физическое явление</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="scipt.js"></script>
+	
 </head>
 <body>
 	<div class="bg1" style="padding: 0; margin: 0; width: 100%;">
-			<ul class="menu" style="width: 35.67px; list-style-type: none;">
-				<li><img src="/image/listik2.svg" class="spisok">
-					<div class="childli" style="width: max-content;">
-					<ul style="width: max-content; list-style-type: none;">
-						<li class="li1"><a href="/index.html" class="menu-link">Главная страница</a></li>
-						<li class="li2"><a href="/phis/phisyvl.html" class="menu-link">Плазма как физическое явление</a></li>
-						<li class="li3"><a href="" class="menu-link">Физические свойства плазмы</a></li>
-						<li class="li4"><a href="" class="menu-link">Методы создания и поддержания плазмы</a></li>
-						<li class="li5"><a href="" class="menu-link">Применение плазмы в различных областях науки и техники</a></li>
-						<li class="li6"><a href="" class="menu-link">Проблемы и перспективы исследований плазмы</a></li>
-					</ul>
-				</div>
-				</li>
-			</ul>
-
+		<div class="nav">
+		<button type="button" class="menu-btn" id="ButtonMenu"> &equiv;</button>
+		<ul class="menu" style="list-style-type: none;" id="menu-list">
+			<li><a href="/index.html">Главная страница</a></li>
+			<li><a href="/phis/phisyvl.html">Плазма как физическое явление</a></li>
+			<li><a href="">Физические свойства плазмы</a></li>
+			<li><a href="">Методы создания и поддержания плазмы</a></li>
+			<li><a href="">Применение плазмы в различных областях науки и техники</a></li>
+			<li><a href="">Проблемы и перспективы исследований плазмы</a></li>
+		</ul>
+		</div>
 		<div class="vopr">
 			<p class="vopros">
 				Что такое плазма?
@@ -37,30 +33,57 @@
 		</div>
 	</div>
 	<div class="scroll-block">
+		<button type="button" class="zagalov" id="YavlButton1">Основные физическое характеристики плазмы</button>
+		<div class="cont-blocks">
 		<div class="inf-block">
 			<div class="image-container">
-				<img src="/image/plasma.jpg" alt="">
+				<img src="/image/phis1.jpg" alt="">
 			</div>
 			<div class="content">
-				
+				<h1>Высокая степень ионизации</h1>
+				<p>В плазме значительная часть атомов теряет или приобретает электроны, превращаясь в ионы. Это означает, что в плазме много свободных заряженных частиц — электронов и ионов. Именно это делает плазму уникальной и отличает её от обычного газа.</p>
+				<button type="button" id="YavlButton2">▶</button>
 			</div>
 		</div>
-		<div class="inf-block">
+		<div class="inf-block2">
 			<div class="image-container">
-
+				<img src="/image/phis2.jpg" alt="">
 			</div>
 			<div class="content">
-
+				<h1>Коллективное поведение</h1>
+				<p>Частицы в плазме (электроны и ионы) взаимодействуют друг с другом через электрические и магнитные поля. Это приводит к тому, что плазма ведет себя как единая система, а не как отдельные частицы. Например, волны или колебания в плазме распространяются на большие расстояния, затрагивая множество частиц одновременно.
+				</p>
+				<button type="button" id="YavlButton3">▶</button>
 			</div>
 		</div>
-		<div class="inf-block">
+		<div class="inf-block3">
 			<div class="image-container">
-
+				<img src="/image/phis3.jpg" alt="">
 			</div>
 			<div class="content">
-
+				<h1>Квазинейтральность</h1>
+				<p>Плазма образуется при очень высоких температурах, когда атомы получают достаточно энергии, чтобы потерять свои электроны. Солнце – огромный шар плазмы, раскалённый до миллионов градусов, именно поэтому оно так ярко светит и излучает тепло.</p>
 			</div>
+		</div>
+
+	</div>
+	</div>
+	<div class="istor" style="padding: 0; margin: 0; width: 100%;">
+		<button class="histor-btn" id="ButtonBlock1"  type="button" style="display:flex; justify-content:center; align-items:center;">История открытия и изучения плазмы</button>
+		<div class="fact1">
+			<img src="/image/ucheniy1jpg.jpg" alt="Уильям Крукс" class="ucheniy1">
+			<p class="facts1"> Во второй половине 1870-х годов Уильям Крукс изучал катодные лучи в вакуумных трубках. Он предположил, что эти лучи — это заряженные частицы газа, которые он назвал «лучистой материей». 22 августа 1879 года Крукс заявил, что разряды в разреженных газах «так непохожи на все происходящее в воздухе или любом газе при обычном давлении, что в этом случае мы имеем дело с веществом в четвертом состоянии, которое по свойствам отличается от обычного газа в такой же степени, что и газ от жидкости». Однако его идея не получила широкого признания, особенно после того, как в 1897 году Джозеф Джон Томсон доказал, что катодные лучи — это электроны, а не частицы газа.
+			<button class="histor-btn" id="ButtonBlock2"  type="button">▶</button>
+		</div>
+		<div class="fact2">
+			<div class="image-cont">
+				<img src="/image/гсрутшн2.jpg" alt="Ленгмюр" class="ucheniy2">
+				</div>
+			<p class="facts2">
+				Но она стала вновь интересна после того, как во второй половине 1920-ого года химик Ирвинг Ленгмюр занялся исследованием газовых разрядов. Тогда уже знали, что в пространстве между положительным электродом и источником тока атомы газа теряют электроны и превращаются в положительно заряженные ионы. Осознав, что подобный газ имеет множество свойств, Ленгмюр решил назвать его своим именем, но из-за странных ассоциации он выбрал слово "плазма", которое до этого использовалось в биологии и химии. Впервые в своем новом значении "плазма" появилась в 1929 году в статье "Колебания в ионизованных газах". Тридцать лет мало кто пользовался этим термином, но потом он прочно вошел в научный обиход.
+			</p>
 		</div>
 	</div>
 </body>
+<script src="script.js"></script>
 </html>
