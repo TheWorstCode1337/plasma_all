@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav{
+	z-index: infinite;
+	.menu{
+		position: relative;
+    	z-index: 1003; /* Добавьте это */
+		pointer-events: auto !important;
+	}
+	#menu-list {
+		visibility: hidden;
+		flex-direction: column;
+		position: absolute;
+		text-align: left;
+		list-style-type: none;
+		display: flex;
+		background-color: #ddd;
+		opacity: 0;
+		width: fit-content;
+		height: max-content;
+		border-radius: 5px;
+		transform: translateY(-20px);
+		margin-left: 1.25%;
+		li{
+			text-align: left;
+			display: table;
+			padding-left: 1%;
+			font-size: 20px;
+			background-size: 150% 150%;
+			animation: gradient-text 10s ease-in-out infinite;
+			transform: translate3d(0,0,0);
+
+			a{
+				text-decoration: none;
+				color: black;
+				z-index: infinite;
+			}
+
+		}
+	}
+	#menu-list.active {
+		visibility: visible;
+		z-index: infinite;
+		display: block;
+		animation: fadeInDowner .3s ease-in-out forwards;
+	}
+	
+	#menu-list.closing{
+		animation: fadeInUpper .3s ease-in-out forwards;
+		
+	}
+	button{
+		background: none;
+		outline: inherit;
+		font: inherit;
+		border: none;
+		color: inherit;
+		cursor: pointer;
+		padding: 0;
+	}
+
+	.menu-btn{
+		font-family: initial !important;
+		width: auto;
+		padding-left: 1.75%;
+		transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform-origin: center;
+        will-change: transform;
+		font-size: 60px;
+		font-weight: normal;
+	}
+
+	.menu-btn:hover{
+		transform: scale(1.1);
+	}
+
+}
+
+@keyframes fadeInUpper{
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+	
+@keyframes fadeInDowner {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.osnovniye{
+
+}
+
+body{
+	font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+	overflow-x: hidden;
+	line-height: 1.5;
+}
