@@ -9,7 +9,13 @@
 .nav {
   z-index: infinite;
 }
+.nav .menu {
+  position: relative;
+  z-index: 1003; /* Добавьте это */
+  pointer-events: auto !important;
+}
 .nav #menu-list {
+  visibility: hidden;
   flex-direction: column;
   position: absolute;
   text-align: left;
@@ -17,13 +23,13 @@
   display: flex;
   background-color: #ddd;
   opacity: 0;
-  width: -moz-max-content;
-  width: max-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 5px;
   transform: translateY(-20px);
-  margin-left: 1%;
+  margin-left: 1.25%;
 }
 .nav #menu-list li {
   text-align: left;
@@ -39,7 +45,12 @@
   animation: gradient-text 10s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
 }
+.nav #menu-list li a {
+  z-index: infinite;
+}
 .nav #menu-list.active {
+  visibility: visible;
+  z-index: infinite;
   display: block;
   animation: fadeInDowner 0.3s ease-in-out forwards;
 }
@@ -56,10 +67,17 @@
   padding: 0;
 }
 .nav .menu-btn {
+  font-family: initial !important;
   width: auto;
-  padding-left: 1%;
+  padding-left: 1.75%;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+  will-change: transform;
   font-size: 60px;
   font-weight: normal;
+}
+.nav .menu-btn:hover {
+  transform: scale(1.1);
 }
 
 @keyframes fadeInUpper {
@@ -119,32 +137,56 @@ body {
     opacity: 1;
   }
 }
-.vopr .vopros {
-  z-index: infinite;
-  text-align: center;
-  opacity: 0;
+.vopr button {
+  background: none;
+  outline: inherit;
+  font: inherit;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+.vopr #voprosButton {
+  width: 100%;
+  z-index: 1000;
+  position: absolute;
+  display: flex;
+  justify-content: center;
   font-size: 55px;
   animation: fadeInRight 1.5s ease-out, fadeIn 2s ease-in-out;
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
-.vopr .otvet {
+.vopr #ovetPoyavl {
   text-align: center;
-  animation: fadeInRight 1.5s ease-out, fadeIn 2s ease-in-out;
   animation-delay: 1.5s;
   opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
   animation-fill-mode: forwards;
   padding-top: 12%;
   font-size: 73.87px;
 }
-.vopr .poyas {
+.vopr #poyasPoyavl {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
   padding-top: 10%;
-  animation: fadeInRight 1.5s ease-out, fadeIn 2s ease-in-out;
   animation-delay: 1.5s;
   opacity: 0;
   animation-fill-mode: forwards;
   font-size: 50px;
+}
+.vopr #ovetPoyavl.show {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeInRight 1.5s ease-out, fadeIn 2s ease-in-out;
+}
+.vopr #poyasPoyavl.show {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeInRight 1.5s ease-out, fadeIn 2s ease-in-out;
 }
 
 @keyframes fadeInRight {
@@ -174,7 +216,7 @@ body {
   width: 100vw;
   text-align: center;
   color: #000;
-  font-size: 45px;
+  font-size: 50px;
   font-weight: normal;
   padding-top: 8.75%;
 }
@@ -339,4 +381,57 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.classific {
+  position: relative;
+  height: 130vh;
+  width: auto;
+  background-color: white;
+}
+.classific .cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.classific .card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.classific .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.classific .info-box {
+  position: sticky;
+  top: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  min-height: 100px;
+  text-align: left;
+}
+.classific .info-box p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+.classific h2 {
+  height: -moz-max-content;
+  height: max-content;
+  font-weight: normal;
+  text-align: center;
+  font-size: 40px;
+}
+.classific p {
+  font-size: 1.1rem;
 }/*# sourceMappingURL=style.css.map */

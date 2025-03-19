@@ -3,6 +3,19 @@ const btnhistor2 = document.getElementById('ButtonBlock2');
 const fact1 = document.querySelector('.fact1');
 const fact2 = document.querySelector('.fact2');
 
+const cards = document.querySelectorAll('.card');
+const infoBox = document.getElementById('infoBox');
+const defaultText = infoBox.innerHTML;
+
+cards.forEach(card => {
+	card.addEventListener('mouseenter', () => {
+		const info = card.getAttribute('data-info');
+		infoBox.innerHTML = `<p>${info}</p>`;
+	});
+	card.addEventListener('mouseleave', () => {
+		infoBox.innerHTML = defaultText;
+	})
+});
 const YavlButton = document.getElementById('YavlButton1');
 const YavlButton2 = document.getElementById('YavlButton2');
 const YavlButton3 = document.getElementById('YavlButton3');
@@ -25,6 +38,18 @@ button.addEventListener('click', () => {
     requestAnimationFrame(() => menu.classList.add('active'));
   }
 });
+
+const vopros = document.getElementById('voprosButton');
+const otvet = document.getElementById('ovetPoyavl');
+const poyas = document.getElementById('poyasPoyavl')
+
+vopros.addEventListener('click', ()=>{
+	otvet.classList.toggle('show');
+	poyas.classList.toggle('show');
+
+	vopros.disabled = true;
+	vopros.style.cursor = 'default';
+})
 
 YavlButton.addEventListener('click', () => {
 	infBlock.classList.toggle('show');
