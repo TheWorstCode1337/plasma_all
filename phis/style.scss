@@ -33,7 +33,7 @@
 		margin-left: 1.25%;
 		li{
 			text-align: left;
-			background: linear-gradient(45deg, #333 40%, #0000ff 60%);
+			background: black;
 			-webkit-background-clip: text;
 			background-clip: none;
 			-webkit-text-fill-color: transparent;
@@ -472,6 +472,9 @@ body{
 	}
 
 	h2{
+		border-bottom: 2px solid #3a3a3a28;
+		border-radius: 2px;
+		margin-bottom: 20px;
 		height: max-content;
 		font-weight: normal;
 		text-align: center;
