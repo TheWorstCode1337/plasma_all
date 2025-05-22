@@ -13,3 +13,4 @@ button.addEventListener('click', () => {
     requestAnimationFrame(() => menu.classList.add('active'));
   }
 });
+

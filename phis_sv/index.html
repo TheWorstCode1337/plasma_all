@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Физические свойства плазмы</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<style>
+    .info, #menu {
+            position: absolute;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            pointer-events: none;
+        }
+        canvas { display: block; }
+        .info { top: 795%; width: 100%; text-align: center; }
+        #menu {
+            top: 700%; left: 25px; pointer-events: auto; background: rgba(0,0,0,0.5);
+            padding: 10px; border-radius: 8px;
+        }
+        #menu label { display: block; margin-bottom: 5px; font-size: 14px; }
+        #menu input { width: 100%; margin-bottom: 10px; }
+    </style>
+</style>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
@@ -240,7 +256,14 @@
     </div>
 
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <div class="info"><p>Перетаскивайте мышью, чтобы вращать Солнце</p></div>
+    <div id="menu">
+        <label for="colorPicker">Цвет Солнца</label>
+        <input type="color" id="colorPicker" value="#ff6600">
+    </div>  
 </body>
 <script src="script.js"></script>
 </html>
